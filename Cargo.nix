@@ -914,10 +914,6 @@ rec {
             packageId = "futures";
           }
           {
-            name = "glob";
-            packageId = "glob";
-          }
-          {
             name = "log";
             packageId = "log";
           }
@@ -928,10 +924,6 @@ rec {
           {
             name = "reqwest";
             packageId = "reqwest";
-          }
-          {
-            name = "rusoto_cloudformation";
-            packageId = "rusoto_cloudformation";
           }
           {
             name = "rusoto_core";
@@ -1567,16 +1559,6 @@ rec {
           "rustc-dep-of-std" = [ "compiler_builtins" "core" "libc/rustc-dep-of-std" "wasi/rustc-dep-of-std" ];
         };
         resolvedDefaultFeatures = [ "std" ];
-      };
-      "glob" = rec {
-        crateName = "glob";
-        version = "0.3.0";
-        edition = "2015";
-        sha256 = "0x25wfr7vg3mzxc9x05dcphvd3nwlcmbnxrvwcvrrdwplcrrk4cv";
-        authors = [
-          "The Rust Project Developers"
-        ];
-
       };
       "h2" = rec {
         crateName = "h2";
@@ -3286,53 +3268,6 @@ rec {
         };
         resolvedDefaultFeatures = [ "__tls" "default" "default-tls" "hyper-tls" "native-tls-crate" "tokio-native-tls" ];
       };
-      "rusoto_cloudformation" = rec {
-        crateName = "rusoto_cloudformation";
-        version = "0.47.0";
-        edition = "2018";
-        sha256 = "0pdh5p63cn9a738yq3x21bc7nq0p5hzl90fq433jaiy1rz7v83g0";
-        authors = [
-          "Anthony DiMarco <ocramida@gmail.com>"
-          "Jimmy Cuadra <jimmy@jimmycuadra.com>"
-          "Matthew Mayer <matthewkmayer@gmail.com>"
-          "Nikita Pekin <contact@nikitapek.in>"
-        ];
-        dependencies = [
-          {
-            name = "async-trait";
-            packageId = "async-trait";
-          }
-          {
-            name = "bytes";
-            packageId = "bytes";
-          }
-          {
-            name = "futures";
-            packageId = "futures";
-          }
-          {
-            name = "rusoto_core";
-            packageId = "rusoto_core";
-            usesDefaultFeatures = false;
-          }
-          {
-            name = "serde_urlencoded";
-            packageId = "serde_urlencoded";
-          }
-          {
-            name = "xml-rs";
-            packageId = "xml-rs";
-          }
-        ];
-        features = {
-          "default" = [ "native-tls" ];
-          "deserialize_structs" = [ "bytes/serde" "serde" "serde_derive" ];
-          "native-tls" = [ "rusoto_core/native-tls" ];
-          "rustls" = [ "rusoto_core/rustls" ];
-          "serialize_structs" = [ "bytes/serde" "serde" "serde_derive" ];
-        };
-        resolvedDefaultFeatures = [ "default" "native-tls" ];
-      };
       "rusoto_core" = rec {
         crateName = "rusoto_core";
         version = "0.47.0";
@@ -4913,9 +4848,9 @@ rec {
       };
       "version_check" = rec {
         crateName = "version_check";
-        version = "0.9.3";
+        version = "0.9.4";
         edition = "2015";
-        sha256 = "1zmkcgj2m0pq0l4wnhrp1wl1lygf7x2h5p7pvjwc4719lnlxrv2z";
+        sha256 = "0gs8grwdlgh0xq660d7wr80x14vxbizmd8dbp29p2pdncx8lp1s9";
         authors = [
           "Sergio Benitez <sb@sergio.bz>"
         ];

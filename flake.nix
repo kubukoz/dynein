@@ -12,6 +12,7 @@
       in
       {
         defaultPackage = pkgs.callPackage ./derivation.nix { inherit (inputs) gitignore-source; };
+        devShells.default = pkgs.mkShell { buildInputs = [ pkgs.crate2nix ]; };
       }
     );
 }
